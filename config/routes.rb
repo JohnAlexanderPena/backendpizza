@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :user
-  resources :review
+  resources :users
+  resources :reviews
   resources :pizzaplaces
-  
+
 end

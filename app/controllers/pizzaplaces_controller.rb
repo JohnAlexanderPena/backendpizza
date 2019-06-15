@@ -1,23 +1,24 @@
-class PizzaPlacesController < ApplicationController
+class PizzaplacesController < ApplicationController
 
   def index
-    @pizzaplace = User.all
-
-    render json: @pizzaplace
-  end
-
-  def show
-    @pizzaplaces = User.find(params[:id])
+    @pizzaplaces = Pizzaplace.all
 
     render json: @pizzaplaces
   end
 
+  def show
+    @pizzaplace = Pizzaplace.find(params[:id])
+
+    render json: @pizzaplace
+  end
+
 
   def create
-    @pizzaplaces = User.new(pizzaplaces_params)
-      if @pizzaplaces.valid?
-    @pizzaplaces = User.save
-      render json: @pizzaplaces
+    @pizzaplace = Pizzaplace.new(pizzaplaces_params)
+      if @pizzaplace.valid?
+    @pizzaplace = Pizzaplace.save
+      render json: @pizzaplace
+    end
   end
 
 private
