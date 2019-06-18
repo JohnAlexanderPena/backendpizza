@@ -14,17 +14,18 @@ class PizzaplacesController < ApplicationController
 
 
   def create
-    @pizzaplace = Pizzaplace.new(pizzaplaces_params)
-      if @pizzaplace.valid?
-    @pizzaplace = Pizzaplace.save
+    @pizzaplace = Pizzaplace.create(pizzaplaces_params)
       render json: @pizzaplace
-    end
+
   end
+
 
 private
 
+
 def pizzaplaces_params
-  require(:pizzaplaces).permit(:name, :address, :lat, :long, :average_rating)
+  params.require(:pizzaplace).permit(:name, :address, :zipcode)
 end
+
 
 end
