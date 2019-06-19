@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   post '/pizzaplaces', to: 'pizzaplaces#create'
 
-
-
+  patch '/reviews/:id', to: 'reviews#update'
+  
 end

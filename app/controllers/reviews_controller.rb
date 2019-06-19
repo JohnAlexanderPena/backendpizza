@@ -25,12 +25,13 @@ class ReviewsController < ApplicationController
     @review.update(review_params)
 
   render json: @review
+
   end
 
   private
 
   def review_params
-    require(:review).permit(:rating, :content, :user_id, :pizzaplace_id)
+    params.require(:review).permit(:rating, :content, :user_id, :pizzaplace_id)
   end
 
 end
