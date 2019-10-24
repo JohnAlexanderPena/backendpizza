@@ -15,7 +15,7 @@ class PizzaplacesController < ApplicationController
 
   def create
     @pizzaplace = Pizzaplace.create(pizzaplaces_params)
-      render json: @pizzaplace
+    render json: @pizzaplace
 
   end
 
@@ -24,7 +24,7 @@ private
 
 
 def pizzaplaces_params
-  params.require(:pizzaplace).permit(:name, :address, :zipcode)
+  params.require(:pizzaplace).permit(:name, :address, :zipcode, :long, :lat)
 end
 
 
