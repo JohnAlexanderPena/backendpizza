@@ -20,12 +20,31 @@ Pizzaplace.create(name: "99 Cents Pizza", address: "1723 Broadway, New York, NY"
 
 
 User.create(username: "John Pie")
-User.create(username: "Johanna Pie")
 User.create(username: "Rabbit Pie")
 User.create(username: "Wendall Pie")
+User.create(username: "Johanna Pie")
+User.create(username: "Steve")
+User.create(username: "PieDawg")
+User.create(username: "LemonPie")
+User.create(username: "Papa john")
 
 
 
-Review.create(rating: 4, content: "Cheap and easy just how I like it ;)", user_id: 2, pizzaplace_id: 1)
-Review.create(rating: 5, content: "Nice place and also $2 beers!", user_id: 2, pizzaplace_id: 2)
-Review.create(rating: 3, content: "I love it, best dollar pizza out there!", user_id: 1, pizzaplace_id: 2)
+Review.create(rating: 3, content: "I love it, best dollar pizza out there!", user_id: 5, pizzaplace_id: 5)
+Review.create(rating: 3, content: "I love it, best dollar pizza out there!", user_id: 3, pizzaplace_id: 4)
+Review.create(rating: 3, content: "I love it, best dollar pizza out there!", user_id: 6, pizzaplace_id: 6)
+
+Review.create(rating: 4, content: "Cheap and easy just how I like it ;)", user_id: 1, pizzaplace_id: 1)
+                     Review.create(rating: 4, content: "Nice duduuuuuede", user_id: 2, pizzaplace_id: 1)
+                     Review.create(rating: 4, content: "Nice duduuuuuede", user_id: 2, pizzaplace_id: 3)
+                     Review.create(rating: 4, content: "Nice duduuuuuede", user_id: 2, pizzaplace_id: 4)
+                     Review.create(rating: 4, content: "Nice duduuuuuede", user_id: 2, pizzaplace_id: 4)
+
+
+
+                        Review.create(rating: 4, content: "SO GOOOOOOD!", user_id: 3, pizzaplace_id: 1)
+  Review.create(rating: 1, content: "I love it, best dollar pizza out there!", user_id: 4, pizzaplace_id: 1)
+  Review.create(rating: 2, content: "I love it, best dollar pizza out there!", user_id: 5, pizzaplace_id: 1)
+        Review.create(rating: 5, content: "Nice place and also $2 beers!", user_id: 2, pizzaplace_id: 2)
+Review.create(rating: 3, content: "I love it, best dollar pizza out there!", user_id: 6, pizzaplace_id: 2)
+Review.create(rating: 4, content: "I love it, best dollar pizza out there!", user_id: 7, pizzaplace_id: 2)

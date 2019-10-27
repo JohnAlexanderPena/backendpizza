@@ -16,10 +16,22 @@ class ReviewsController < ApplicationController
 
   def create
   @review = Review.create(review_params)
-
-  render json: @review
+    if @review.valid?
+    render json: @review
+    else
+    render json: {status: "error", code: 400, errors: "Cannot review ag"}
+  end
   end
 
+ #  @review = Review.create(review_params)
+ # #if the current pizzaplaces have the current user_id params throw error
+ #  @pizzaplace = Pizza.find(params[pizzaplace_id])
+ #  #create a for loop to iterate through the @pizzaplaces.users and see if we find a matching @review.id
+ #  @pizzaplace.user_ids.each{ |user|
+ #    if @review.user_id == user
+ #      return render json: {status: "error", code: 400, errors: "Cannot review again"}
+ #    }
+ #  end
   def update
     @review = Review.find(params[:id])
     @review.update(review_params)
