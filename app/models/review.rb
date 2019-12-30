@@ -1,6 +1,8 @@
 class Review < ApplicationRecord
 
-validates :user_id, uniqueness: true
+  validates :content, presence: true
+  validates :rating, presence: true
+
 
 belongs_to :pizzaplace
 belongs_to :user
